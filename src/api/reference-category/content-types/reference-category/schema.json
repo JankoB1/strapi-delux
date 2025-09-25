@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reference_categories",
+  "info": {
+    "singularName": "reference-category",
+    "pluralName": "reference-categories",
+    "displayName": "Reference category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}

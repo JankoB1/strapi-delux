@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colors",
+  "info": {
+    "singularName": "color",
+    "pluralName": "colors",
+    "displayName": "Color"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Hexcode": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
