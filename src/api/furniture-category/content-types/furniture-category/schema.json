@@ -50,16 +50,18 @@
         "audios"
       ]
     },
+    "AllText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "parent_furniture_category": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::furniture-category.furniture-category"
-    },
-    "product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "furniture_categories"
     },
     "SEO": {
       "type": "component",

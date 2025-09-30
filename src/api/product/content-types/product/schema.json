@@ -35,6 +35,30 @@
       "required": true,
       "regex": "^[a-z]+(?:-[a-z]+)*$"
     },
+    "FeaturedImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "HoverImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "Description": {
       "type": "richtext",
       "pluginOptions": {
@@ -67,11 +91,25 @@
         "images"
       ]
     },
-    "furniture_categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::furniture-category.furniture-category",
-      "mappedBy": "product"
+    "MoreDescription": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "MoreImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "colors": {
       "type": "relation",

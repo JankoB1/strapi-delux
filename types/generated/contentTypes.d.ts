@@ -517,6 +517,12 @@ export interface ApiFurnitureCategoryFurnitureCategory
     };
   };
   attributes: {
+    AllText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -535,7 +541,6 @@ export interface ApiFurnitureCategoryFurnitureCategory
       'oneToOne',
       'api::furniture-category.furniture-category'
     >;
-    product: Schema.Attribute.Relation<'manyToOne', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     SEO: Schema.Attribute.Component<'shared.seo', true> &
       Schema.Attribute.SetPluginOptions<{
@@ -668,14 +673,22 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    furniture_categories: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::furniture-category.furniture-category'
-    >;
+    FeaturedImage: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Gallery: Schema.Attribute.Media<'images', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
+        };
+      }>;
+    HoverImage: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -684,6 +697,18 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     >;
     materials: Schema.Attribute.Relation<'oneToMany', 'api::material.material'>;
+    MoreDescription: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    MoreImage: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     PDF: Schema.Attribute.Media<'files'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
