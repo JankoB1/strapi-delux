@@ -64,6 +64,16 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "Slug": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "regex": "^[a-z]+(?:-[a-z]+)*$"
     }
   }
 }
