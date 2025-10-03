@@ -828,7 +828,7 @@ export interface ApiReferenceReference extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.RichText &
+    Description: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -851,7 +851,7 @@ export interface ApiReferenceReference extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::reference.reference'
     >;
-    MoreDescription: Schema.Attribute.RichText &
+    MoreDescription: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
