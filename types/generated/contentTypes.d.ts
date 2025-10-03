@@ -880,6 +880,13 @@ export interface ApiReferenceReference extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::reference-category.reference-category'
     >;
+    Slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

@@ -101,6 +101,16 @@
       "relation": "manyToOne",
       "target": "api::reference-category.reference-category",
       "inversedBy": "references"
+    },
+    "Slug": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "regex": "^[a-z]+(?:-[a-z]+)*$"
     }
   }
 }
