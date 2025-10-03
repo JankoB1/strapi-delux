@@ -541,6 +541,7 @@ export interface ApiFurnitureCategoryFurnitureCategory
       'oneToOne',
       'api::furniture-category.furniture-category'
     >;
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     SEO: Schema.Attribute.Component<'shared.seo', true> &
       Schema.Attribute.SetPluginOptions<{
@@ -679,6 +680,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    furniture_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::furniture-category.furniture-category'
+    >;
     Gallery: Schema.Attribute.Media<'images', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

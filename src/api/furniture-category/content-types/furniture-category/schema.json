@@ -72,6 +72,12 @@
       },
       "component": "shared.seo",
       "repeatable": true
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "furniture_category"
     }
   }
 }

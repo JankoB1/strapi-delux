@@ -130,6 +130,12 @@
       },
       "component": "shared.seo",
       "repeatable": false
+    },
+    "furniture_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::furniture-category.furniture-category",
+      "inversedBy": "products"
     }
   }
 }
