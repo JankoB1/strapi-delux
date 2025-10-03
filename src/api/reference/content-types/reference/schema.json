@@ -95,6 +95,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "reference_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reference-category.reference-category",
+      "inversedBy": "references"
     }
   }
 }

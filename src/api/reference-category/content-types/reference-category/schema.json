@@ -23,6 +23,12 @@
         }
       },
       "required": true
+    },
+    "references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reference.reference",
+      "mappedBy": "reference_category"
     }
   }
 }

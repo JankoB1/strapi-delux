@@ -792,6 +792,10 @@ export interface ApiReferenceCategoryReferenceCategory
       'api::reference-category.reference-category'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    references: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::reference.reference'
+    >;
     Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -872,6 +876,10 @@ export interface ApiReferenceReference extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    reference_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::reference-category.reference-category'
+    >;
     Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
